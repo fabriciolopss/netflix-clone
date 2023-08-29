@@ -1,0 +1,76 @@
+
+
+.row-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Mudança importante para permitir espaço para as setas */
+    overflow: hidden; /* Remova overflow-x e overflow-y para ocultar a barra de rolagem horizontal */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
+.images-cards{
+    object-fit: contain;
+    width:10%;
+    min-width: 200px;
+    max-height: 250px;
+    overflow: hidden;
+    margin:0px 5px;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 5px;
+}
+
+.images-cards-large{
+    width:40vw;
+    min-width: 400px;
+    max-height: 600px;
+}
+
+.images-cards:hover{
+    transform:scale(1.07);
+    cursor:pointer;
+}
+
+
+
+
+.row-wrapper {
+    margin: 40px 0;
+    position: relative; /* Adicione uma posição relativa para que possamos posicionar as setas dentro deste elemento */
+}
+
+.row-wrapper h2 {
+    color: white;
+}
+
+/* Estilos para as setas */
+.scroll-button {
+    position: absolute;
+    top: 57%;
+    transform: translateY(-50%);
+    width: 30px; /* Largura das setas */
+    height: 90%; /* Altura das setas */
+    background-color: rgb(0, 0, 0); /* Cor de fundo das setas */
+    opacity:0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1; /* Para que as setas estejam acima dos filmes */
+    transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.row-wrapper:hover .scroll-button{
+    opacity:0.5;
+}
+
+.scroll-button-left {
+    left: 0; /* Posicione a seta esquerda no início da lista */
+}
+
+.scroll-button-right {
+    right: 0; /* Posicione a seta direita no final da lista */
+}

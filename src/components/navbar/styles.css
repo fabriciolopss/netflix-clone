@@ -1,0 +1,56 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.nav-wrapper{
+    position:fixed;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height:10vh;
+    padding: 0 5vw;
+    width:90vw;
+    z-index:100;
+    transition:0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.netflixIcon{
+    height: 5vh;
+}
+
+.avatarIcon{
+    height: 5vh;
+}
+
+.listCategories{
+    display:flex;
+    flex-direction: row ;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style-type: none;
+    color:white;
+}
+
+.nav-container-black{
+    background-color:black;
+}
+
+.listCategories li{
+    margin: 0 20px;
+    font-size:1em;
+    cursor:pointer;
+}
+
+a:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 992px){
+    .listCategories{
+        display:none;
+    }
+}
